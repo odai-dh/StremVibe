@@ -1,0 +1,120 @@
+.footer {
+    background-color: var(--SecondaryBackground);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+
+    .pageNavContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .subHead {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .subContainer {
+        margin: 10px;
+        text-align: left;
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--PText);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .line {
+        border: 0;
+        height: 1px;
+        background: #444;
+        width: 90%;
+    }
+
+    .copyrightContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        color: var(--PText);
+        margin: 20px;
+    }
+
+    .policyContainer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .policyLink {
+        color: var(--PText);
+        text-decoration: none;
+    }
+
+    .policyLink:hover {
+        text-decoration: underline;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 40px;
+    }
+
+    .social-links a {
+        color: var(--PText);
+        text-decoration: none;
+    }
+
+    .social-links a:hover {
+        color: var(--mainRed);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        .pageNavContainer {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+
+        .line {
+            margin-top: 6.25rem;
+        }
+
+        .copyrightContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .policyContainer {
+            width: 30rem;
+        }
+
+        .policyLink {
+            padding-left: 2rem;
+        }
+
+        .policyLink3 {
+            margin-right: 2rem;
+        }
+    }
+}

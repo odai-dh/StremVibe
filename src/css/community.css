@@ -1,0 +1,44 @@
+.Community {
+  background-color: var(--mainRed);
+  border-radius: 20px;
+  padding: 4rem;
+  color: white;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  overflow: hidden;
+  background: rgb(15, 15, 15);
+  margin-top: 20px;
+  background: linear-gradient(90deg, rgba(15, 15, 15, 1) 0%, rgba(20, 15, 15, 1) 16%, rgba(34, 14, 14, 1) 28%, rgba(229, 0, 0, 0) 100%);
+
+  .freeTrailButton {
+    background-color: var(--mainRed);
+    padding: 20px 25px;
+    height: max-content;
+    border-radius: 10px;
+    width: max-content;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+    z-index: -1;
+  }
+
+  @media (max-width: 1000px) {
+    gap: 40px;
+    flex-direction: column;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(229,0,0,0.45704219187675066) 100%);
+  }
+}
