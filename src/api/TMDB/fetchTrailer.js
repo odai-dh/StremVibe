@@ -1,4 +1,8 @@
-const API_KEY = '5d591122225247f2e5080c55b838dad4'; 
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
 // Function to fetch a movie trailer from the API
 export const fetchTrailer = async (movieId) => {
