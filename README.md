@@ -130,27 +130,63 @@ TMDB API: Used for retrieving movie/series data, including trailers and cast inf
 
 ## Contributing
 
-Marc:
-- Movie useContext – Implement a React useContext for managing the top 20 movies across the app.
-- Genres API – Fetch movie genres from an API.
-- Movie Page – A dedicated page to display detailed information about a specific movie.
-- Genres Page – A page listing movies categorized by genres, fetched by the API.
-- Search Page and Functionality – Implement a search feature to find movies by title.
-- Including the styling of all those pages .
+We welcome contributions to the Movie Database Project! To contribute, follow these steps:
 
+1. **Fork the repository**: Click the "Fork" button at the top right corner of the repository page to create a copy of the repository in your GitHub account.
 
-Odai:
-- Setting up the SingleMoviePage with all its components and functionality.
-- Setting up the LikedMoviePage with all its components and functionality.
-- Setting Styling functionality to the code like (StarRating, Trailer PopUp, ReviewForm PopUp, Loading Animation, Heder BigButtons est.. )
-- Fixing the slugs functionality and the review, cast, and trailer features.
-- Helped restructure some of the HomePage code.
-- Including the styling of all those pages.
+2. **Clone your fork**: Clone the forked repository to your local machine using the following command:
+    ```bash
+    git clone https://github.com/odai-dh/StremVibe
+    ```
 
-Yali:
-- I did the homepage, I divide the homepage to 7 components, for example: Header, Footer, Devices, Genres,QandA...,
-- Include their css as well.
-- Make sure the page suit for different size of screen, since some components will be used for other pages also, so I did my job first.
+3. **Create a new branch**: Create a new branch for your feature or bug fix.
+    ```bash
+    git checkout -b feature-or-bugfix-name
+    ```
 
+4. **Make your changes**: Make the necessary changes to the codebase.
+
+5. **Commit your changes**: Commit your changes with a descriptive commit message.
+    ```bash
+    git commit -m "Description of the changes"
+    ```
+
+6. **Push to your fork**: Push your changes to your forked repository.
+    ```bash
+    git push origin feature-or-bugfix-name
+    ```
+
+7. **Create a pull request**: Go to the original repository and create a pull request from your forked repository. Provide a clear description of the changes you made and any relevant information.
+
+8. **Review and merge**: Your pull request will be reviewed by the maintainers. Once approved, it will be merged into the main branch.
+
+Thank you for contributing!
 
 ## Coming Soon
+We have exciting features planned for future updates, including:
+
+1. **Series Integration**: 
+   - Add series from the TMDB API.
+   - Browse, search, and view details about series.
+
+2. **Watch Tracking**:
+   - Track which movies and series you have watched.
+   - Keep a record of your watch history.
+
+3. **Progress Tracking**:
+   - Track how much of a series you have watched.
+   - Display progress bars for series episodes.
+
+4. **User Profiles**:
+   - Create and manage user profiles.
+   - Save favorite movies and series.
+
+5. **Enhanced Search**:
+   - Improve search functionality with advanced filters.
+   - Search by genre, release date, and more.
+
+6. **Community Features**:
+   - Add user reviews and ratings.
+   - Create and join discussion forums.
+
+Stay tuned for these updates and more!
