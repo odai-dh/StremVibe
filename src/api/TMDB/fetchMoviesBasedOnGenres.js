@@ -1,7 +1,4 @@
 import { fetchTrailer, fetchCast } from './fetchTrailer';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const BEARERKEY = process.env.REACT_APP_TMDB_BEARER;
 export default async function fetchMovies(category) {
