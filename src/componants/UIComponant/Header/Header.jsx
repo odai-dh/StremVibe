@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 import Search from "./Search";
 import "../../../css/header.css";
 
@@ -10,6 +11,12 @@ export default function Header() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("isDarkMode");
+    return savedTheme ? JSON.parse(savedTheme) : false;
+  });
 
   // Navigation links
   const navLinks = [
@@ -51,6 +58,16 @@ export default function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Apply dark mode class to body
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.setAttribute("data-theme", "dark");
+    } else {
+      document.body.setAttribute("data-theme", "light");
+    }
+    localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
+
   return (
     <header
       className="header"
@@ -79,15 +96,22 @@ export default function Header() {
             aria-label={button.label}
             onClick={button.onClick}
           >
-            <button.Icon fill="white" size={25} aria-hidden="true" />
+            <button.Icon fill="var(--iconColor)" size={25} aria-hidden="true" />
           </button>
         ))}
+        <DarkModeSwitch
+        checked={isDarkMode}
+        onChange={setIsDarkMode}
+        size={24}
+        moonColor="white"
+        sunColor="black"
+      />
       </div>
 
       {/* for mobile */}
       <div className="mobile-icon">
         <button aria-label="Open mobile menu" onClick={toggleMobileMenu}>
-          <GiHamburgerMenu fill="white" size={30} />
+          <GiHamburgerMenu fill="var(--iconColor)" size={30} />
         </button>
       </div>
 
