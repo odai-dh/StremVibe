@@ -1,38 +1,37 @@
 
 .MoviesButtons {
-    margin-top: 10px;
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+
+  .playButton {
     display: flex;
     gap: 10px;
-    flex-direction: row;
+    color: var(--mainWhite);
+    align-items: center;
     justify-content: center;
-  
-    .playButton {
-      display: flex;
-      gap: 10px;
-      color: white;
-      align-items: center;
-      justify-content: center;
-      max-width: max-content;
-      background-color: var(--mainRed);
-      padding: 15px 30px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
-  
-    .thumbsup {
-      padding: 13px 15px;
-      background-color: var(--ButtonBackground);
-      border: var(--PText) 1px solid;
-      font-size: 1.4rem;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .thumbsup:hover {
-      background-color: var(--PText);
-      color: aliceblue;
-    }
+    max-width: max-content;
+    background-color: var(--mainRed);
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
   }
+
+  .thumbsup {
+    padding: 13px 15px;
+    border: var(--PText) 1px solid;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .thumbsup:hover {
+    background-color: var(--PText);
+    color: var(--mainWhite);
+  }
+}
   
   .movieGenres {
     display: flex;
@@ -45,27 +44,27 @@
     }
   }
   
-  .MovieCart {
-    background-color: var(--ButtonBackground);
-    border: 1px solid var(--PText);
-    padding: 1rem;
-    border-radius: 15px;
-    color: white;
-    height: 100%;
-    width: 100%;
-    
-    img {
-      object-fit: cover;
-      border-radius: 10px;
-    }
+.MovieCart {
+  background-color: var(--ButtonBackground);
+  border: 1px solid var(--PText);
+  padding: 1rem;
+  border-radius: 15px;
+  color: var(--mainWhite);
+  height: 100%;
+  width: 100%;
   
-    .inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-      margin-top: 10px;
-    }
-  
-  
+  img {
+    object-fit: cover;
+    border-radius: 10px;
   }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+
+}

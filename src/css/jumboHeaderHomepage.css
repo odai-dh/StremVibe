@@ -1,3 +1,28 @@
+:root {
+  --gradient-dark-start: rgba(0, 0, 0, 0.99);
+  --gradient-dark-middle: rgba(0, 0, 0, 0.5);
+  --gradient-dark-end: rgba(0, 0, 0, 0.95);
+  --gradient-dark-final: rgba(20, 20, 20, 1);
+  --gradient-light-start: rgba(255, 255, 255, 0.99);
+  --gradient-light-middle: rgba(255, 255, 255, 0.5);
+  --gradient-light-end: rgba(255, 255, 255, 0.95);
+  --gradient-light-final: rgba(255, 255, 255, 1);
+}
+
+[data-theme="light"] {
+  --gradient-start: var(--gradient-light-start);
+  --gradient-middle: var(--gradient-light-middle);
+  --gradient-end: var(--gradient-light-end);
+  --gradient-final: var(--gradient-light-final);
+}
+
+[data-theme="dark"] {
+  --gradient-start: var(--gradient-dark-start);
+  --gradient-middle: var(--gradient-dark-middle);
+  --gradient-end: var(--gradient-dark-end);
+  --gradient-final: var(--gradient-dark-final);
+}
+
 .top-imagesContent-container {
   position: relative;
   width: 100%;
@@ -5,7 +30,7 @@
   overflow: hidden;
   margin: 0 auto;
   text-align: center;
-  color: white;
+  color: var(--Background);
   margin-bottom: 4rem;
   .overlay {
     position: absolute;
@@ -15,15 +40,15 @@
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.99) 0%,
-      rgba(0, 0, 0, 0.5) 40%,
-      rgba(0, 0, 0, 0.95) 80%,
-      rgba(20, 20, 20, 1) 100%
+      var(--gradient-start) 0%,
+      var(--gradient-middle) 40%,
+      var(--gradient-end) 80%,
+      var(--gradient-final) 100%
     );
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--mainWhite);
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -50,6 +75,7 @@
         line-height: 150%;
         font-size: 1.75rem;
         font-weight: bold;
+        color: var(--mainWhite);
       }
     }
 
@@ -84,16 +110,15 @@
     width: max-content;
     margin: 20px auto;
     p {
-      color: white;
-      font-size: 0.875rem;
-      line-height: 150%;
-      font-weight: Semibold;
+      color: var(--Background);
+      font-size: 1rem;
+      font-weight: bold;
     }
   }
 }
 @media (min-width: 1024px) {
   .top-imagesContent-container {
-    margin-left: calc(-50vw + 49%);
+    margin-left: calc(-50vw + 50%);
     width: 100vw;
     height: 800px;
 

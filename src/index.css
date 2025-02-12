@@ -132,12 +132,31 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-  --mainRed: #E50000;
+  --mainRed: #E50101;
   --Background: #141414;
   --ButtonBackground: #1A1A1A;
   --PText: #999999;
   --SecondaryBackground: #0F0F0F;
   --lineColor: #1F1F1F;
+  --mainWhite: #FFFFFF;
+  --borderColor: #262626;
+  --hoverEffect: #ffffff33;
+  --buttonHover : #8b0000;
+  --iconColor : #FFFFFF;
+}
+
+[data-theme="light"] {
+  --mainRed: #387bd9;
+  --Background: #FFFFFF;
+  --ButtonBackground: #F0F0F0;
+  --PText: #666666;
+  --SecondaryBackground: #e9e5e5;
+  --lineColor: #E0E0E0;
+  --mainWhite: #000000;
+  --borderColor: #CCCCCC;
+  --hoverEffect: #00000033;
+  --buttonHover : #214a84;
+  --iconColor : #000000;
 }
 
 body {

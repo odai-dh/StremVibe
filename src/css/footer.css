@@ -1,6 +1,6 @@
 .footer {
     background-color: var(--SecondaryBackground);
-    color: #fff;
+    color: var(--mainWhite);
     padding: 20px;
     text-align: center;
     margin-top: 20px;

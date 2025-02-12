@@ -1,6 +1,6 @@
 .search {
     h1 {
-        color: white;
+        color: var(--mainWhite);
         font-size: bold;
         font-weight: 2rem;
         margin: 40px 0;
@@ -10,7 +10,7 @@
         background-color: var(--SecondaryBackground);
         padding: 20px;
         border-radius: 20px;
-        color: white;
+        color: var(mainWhite);
         display: flex;
         gap: 40px;
         justify-content: space-between;
@@ -32,12 +32,12 @@
 
         p {
             margin-top: 10px;
-            color: #9999;
+            color: var(--PText);
         }
 
         .button {
             background-color: var(--mainRed);
-            color: white;
+            color: var(--mainWhite);
             font-weight: bold;
             padding: 20px 25px;
             border-radius: 5px;

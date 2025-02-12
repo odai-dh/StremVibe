@@ -1,6 +1,28 @@
+:root {
+  --gradientt-dark-start: rgba(255, 0, 0, 0.1);
+  --gradientt-dark-middle: rgba(255, 0, 0, 0.9);
+  --gradientt-dark-end: rgba(255, 0, 0, 0.3);
+  --gradientt-light-start: rgba(0, 0, 255, 0.1);
+  --gradientt-light-middle: rgba(0, 0, 255, 0.9);
+  --gradientt-light-end: rgba(0, 0, 255, 0.3);
+}
+
+[data-theme="light"] {
+  --gradientt-start: var(--gradientt-light-start);
+  --gradientt-middle: var(--gradientt-light-middle);
+  --gradientt-end: var(--gradientt-light-end);
+}
+
+[data-theme="dark"] {
+  --gradientt-start: var(--gradientt-dark-start);
+  --gradientt-middle: var(--gradientt-dark-middle);
+  --gradientt-end: var(--gradientt-dark-end);
+}
+
+
 .QandAContainer {
   user-select: none;
-  color: white;
+  color: var(--mainWhite);
   font-size: 0.875rem;
   line-height: 150%;
   .QandAHead {
@@ -16,7 +38,7 @@
       color: var(--main-color);
       background-color: var(--secondary-color);
       &:hover {
-        background-color: darkred;
+        background-color: var(--buttonHover);
         cursor: pointer;
       }
     }
@@ -34,14 +56,14 @@
         align-items: center;
         font-size: 1rem;
         gap: 1.75rem;
-        color: white;
+        color: var(--mainWhite);
         font-size: 1.125rem;
         line-height: 150%;
         position: relative;
        
         p {
-          border: solid 0.01px rgba(255, 255, 255, 0.2);
-          background-color: rgba(255, 255, 255, 0.05);
+          border: solid 0.01px var(--hoverEffect);
+          background-color: #ffffff0d;
           padding: 0.75rem;
           border-radius: 4px;
         }
@@ -52,14 +74,13 @@
         }
       }
       .line {
-        background: linear-gradient(135deg, red, white);
         background: linear-gradient(
           to left,
-          rgba(255, 0, 0, 0.1) 0%,
-          rgba(255, 0, 0, 0.9) 80%,
-          rgba(255, 0, 0, 0.3) 100%
+          var(--gradientt-start) 0%,
+          var(--gradientt-middle) 80%,
+          var(--gradientt-end) 100%
         );
-        height: 0.6px;
+        height: 0.7px;
         width: 100%;
       }
     }

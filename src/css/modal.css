@@ -41,6 +41,6 @@
     line-height: 1;
   }
   .modal-close:hover {
-    background: darkred;
+    background: var(--buttonHover);
   }
 }

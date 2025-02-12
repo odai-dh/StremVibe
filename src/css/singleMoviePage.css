@@ -16,7 +16,7 @@
 
   p {
     font-size: 16px;
-    color: #FFFFFF;
+    color: var(--mainWhite);
     letter-spacing: 0.03rem;
   }
 
@@ -93,7 +93,7 @@
 .movieOtherContainer {
   padding: 30px;
   background-color: var(--ButtonBackground);
-  color: #FFFFFF;
+  color: var(--mainWhite);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: auto;
@@ -121,15 +121,13 @@
 
   h2 {
     font-size: 1.25rem;
-    /* margin-bottom: 20px; */
     color: var(--PText);
     letter-spacing: 0.05rem;
   }
 
   p {
-    /* margin: 40px 0; */
     font-size: 1rem;
-    color: #FFFFFF;
+    color: var(--mainWhite);
     letter-spacing: 0.03rem;
     margin: 10px 0;
   }
@@ -138,13 +136,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* margin: 20px 0; */
     margin: 10px;
   }
 
   .genreButton {
     background-color: var(--Background);
-    color: #FFFFFF;
+    color: var(--mainWhite);
     border: 1px solid var(--PText);
     border-radius: 5px;
     padding: 10px 15px;
@@ -153,7 +150,7 @@
   }
 
   .genreButton:hover {
-    background-color: #FFFFFF;
+    background-color: var(--mainWhite);
     color: var(--ButtonBackground);
   }
 }
@@ -177,15 +174,15 @@
     display: flex;
     align-items: center;
     background-color: var(--ButtonBackground);
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
+    color: var(--mainWhite);
+    border: 1px solid var(--mainWhite);
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
   }
   .add-review-button:hover {
-    background-color: #FFFFFF;
+    background-color: var(--mainWhite);
     color: var(--ButtonBackground);
   }
 
@@ -216,7 +213,7 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #FFFFFF;
+    color: var(--mainWhite);
   }
   .review-form {
     display: flex;
@@ -226,7 +223,7 @@
     input,
     textarea {
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid var(--borderColor);
       border-radius: 5px;
       width: 90%;
     }
@@ -237,8 +234,8 @@
     button {
       align-self: flex-end;
       background-color: var(--ButtonBackground);
-      color: #FFFFFF;
-      border: 1px solid #FFFFFF;
+      color: var(--mainWhite);
+      border: 1px solid var(--mainWhite);
       border-radius: 5px;
       padding: 10px 15px;
       margin-top: 20px;
@@ -246,7 +243,7 @@
       transition: background-color 0.3s, color 0.3s;
     }
     button:hover {
-      background-color: #FFFFFF;
+      background-color: var(--mainWhite);
       color: var(--ButtonBackground);
     }
   }
@@ -281,7 +278,7 @@
 
   p {
     font-size: 14px; 
-    color: #FFFFFF;
+    color: var(--mainWhite);
     max-height: 100px; 
     overflow-y: auto;
     letter-spacing: 0.03rem;

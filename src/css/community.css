@@ -1,17 +1,46 @@
+:root {
+  --ggradient-dark-start: rgba(15, 15, 15, 1);
+  --ggradient-dark-middle1: rgba(20, 15, 15, 1);
+  --ggradient-dark-middle2: rgba(34, 14, 14, 1);
+  --ggradient-dark-end: rgba(229, 0, 0, 0);
+  --ggradient-light-start: rgba(255, 255, 255, 1);
+  --ggradient-light-middle1: rgba(240, 240, 240, 1);
+  --ggradient-light-middle2: rgba(230, 230, 230, 1);
+  --ggradient-light-end: rgba(255, 255, 255, 0);
+}
+
+[data-theme="light"] {
+  --community-gradient-start: var(--ggradient-light-start);
+  --community-gradient-middle1: var(--ggradient-light-middle1);
+  --community-gradient-middle2: var(--ggradient-light-middle2);
+  --community-gradient-end: var(--ggradient-light-end);
+}
+
+[data-theme="dark"] {
+  --community-gradient-start: var(--ggradient-dark-start);
+  --community-gradient-middle1: var(--ggradient-dark-middle1);
+  --community-gradient-middle2: var(--ggradient-dark-middle2);
+  --community-gradient-end: var(--ggradient-dark-end);
+}
+
+
 .Community {
-  background-color: var(--mainRed);
   border-radius: 20px;
   padding: 4rem;
-  color: white;
+  color: var(--mainWhite);
   position: relative;
   display: flex;
   gap: 20px;
   justify-content: space-between;
   overflow: hidden;
-  background: rgb(15, 15, 15);
   margin-top: 20px;
-  background: linear-gradient(90deg, rgba(15, 15, 15, 1) 0%, rgba(20, 15, 15, 1) 16%, rgba(34, 14, 14, 1) 28%, rgba(229, 0, 0, 0) 100%);
-
+  background: linear-gradient(
+    90deg,
+    var(--community-gradient-start) 0%,
+    var(--community-gradient-middle1) 16%,
+    var(--community-gradient-middle2) 28%,
+    var(--community-gradient-end) 100%
+  );
   .freeTrailButton {
     background-color: var(--mainRed);
     padding: 20px 25px;
@@ -39,6 +68,6 @@
     gap: 40px;
     flex-direction: column;
     padding: 40px 20px;
-    background: linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(229,0,0,0.45704219187675066) 100%);
+    background: linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(229,0,0,0.4) 100%);
   }
 }

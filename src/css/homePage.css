@@ -9,18 +9,18 @@
 
 
 .smallWords {
-  color: grey;
+  color: var(--PText);
   font-size: 0.875rem;
   line-height: 150%;
 }
 .subtitle {
-  color: white;
+  color: var(--mainWhite);
   font-size: 1.5rem;
   line-height: 150%;
   font-weight: bold;
 }
 .thirdTitle {
-  color: white;
+  color: var(--mainWhite);
   font-size: 1.125rem;
   line-height: 150%;
   font-weight: bold;

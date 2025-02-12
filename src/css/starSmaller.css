@@ -40,7 +40,7 @@
 
   .rating-number {
     font-size: 1rem;
-    color: #999999;
+    color: var(--PText);
     font-weight: bold;
   }
 }
@@ -49,8 +49,8 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  background-color: var(--Background);
-  border: 1px solid #262626;
+  background-color: var(--SecondaryBackground);
+  border: 1px solid var(--borderColor);
   height: auto;
   padding: 8px;
   width: 100%;
@@ -66,8 +66,6 @@
     width: 20px;
     height: 20px;
     color: var(--mainRed);
-    /* margin-right: 5px; */
-    
   }
 
   h3 {
@@ -77,8 +75,7 @@
 
   .rating-number {
     font-size: 1.2rem;
-    color: #FFFFFF;
-    font-weight: bold;
-    /* transform: translateY(-5px); */
+    color: var(--mainWhite);
+    font-weight: semibold;
   }
 }
