@@ -4,6 +4,7 @@ import '../../css/movieGrid.css';
 
 const APIMoviesContext = createContext();
 const BEARERKEY = process.env.REACT_APP_TMDB_BEARER;
+const BASE_URL = process.env.REACT_APP_TMDB_BASE_URL;
 
 // Provider component to manage API movies state
 export const APIProvider = ({ children }) => {
@@ -12,7 +13,7 @@ export const APIProvider = ({ children }) => {
     const [error, setError] = useState(null);
     // Fetch movies from the API
     const fetchMovies = async () => {
-        const url = `${process.env.REACT_APP_TMDB_BASE_URL}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`;
+        const url = `${BASE_URL}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`;
         const options = {
             method: 'GET',
             headers: {
