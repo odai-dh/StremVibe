@@ -8,7 +8,9 @@ const SubContainer = ({ title, links }) => {
       <ul>
         {links.map((link, index) => (
           <li key={index}>
-            <a href="/" aria-label={link}>{link}</a>
+            <a href="/" aria-label={link}>
+              {link}
+            </a>
           </li>
         ))}
       </ul>
@@ -41,12 +43,18 @@ export default function Footer() {
       </div>
       <hr className="line" />
       <div className="copyrightContainer">
-        <div className="copyright">@2025 StreamVibe, All Rights Reserved</div>
-        <div className="policyContainer">
-          <a href="/" className="policyLink" aria-label="Terms of Use">Terms of Use</a>
-          <a href="/" className="policyLink" aria-label="Privacy Policy">Privacy Policy</a>
-          <a href="/" className="policyLink" aria-label="Cookie Policy">Cookie Policy</a>
-        </div>
+      <div className="copyright">@2025 StreamVibe, All Rights Reserved</div>
+        <ul className="policyContainer">
+          <li>
+            <a href="/" className="policyLink" aria-label="Terms of Use">Terms of Use</a>
+          </li>
+          <li>
+            <a href="/" className="policyLink" aria-label="Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/" className="policyLink" aria-label="Cookie Policy">Cookie Policy</a>
+          </li>
+        </ul>
       </div>
     </footer>
   );

@@ -29,21 +29,19 @@ export default function Search({ isOpen }) {
   if (!isOpen) return null;
 
   return (
-    <div className="searchBar">
-      <div>
-        <form onSubmit={handleSearch}>
+
+        <form className="searchBar" onSubmit={handleSearch}>
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search movies..."
             className="search-input"
+            onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
             autoFocus
           />
 
           <button type="submit">Search Movies</button>
         </form>
-      </div>
-    </div>
   );
 }

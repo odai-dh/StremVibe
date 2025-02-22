@@ -9,16 +9,16 @@ import "../css/homePage.css";
 
 export default function HomePage() {
   return (
-    <div className="homePage">
+    <main className="homePage">
       <Header />
       <div className="container">
-      <JumboHeaderHome />
-      <Genres amount="5" />
-      <Devices />
-      <QandA />
-      <Community />
+        <JumboHeaderHome />
+        <Genres amount="5" />
+        <Devices />
+        <QandA />
+        <Community />
       </div>
       <Footer />
-    </div>
+    </main>
   );
 }
