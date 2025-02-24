@@ -7,14 +7,11 @@ export default function Search({ isOpen }) {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
-  // Function to handle search form submission
   const handleSearch = async (e) => {
     e.preventDefault();
 
     try {
-      // Fetch search results based on the search query
       const results = await fetchSearchResults(searchQuery);
-      // Navigate to the search results page with the search query and results
       navigate("/search-results", {
         state: {
           results: results,
