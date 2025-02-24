@@ -33,6 +33,6 @@
         border-radius: 5px;
         cursor: pointer;
         width: max-content;
-        color: var(--mainWhite);
+        color: #FFFFFF;
     }
 }

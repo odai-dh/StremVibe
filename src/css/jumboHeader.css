@@ -13,7 +13,7 @@
 
   p {
     margin: 20px 0;
-    color: var(--Background);
+    color: var(--PText);
     line-height: 1.8rem;
   }
 

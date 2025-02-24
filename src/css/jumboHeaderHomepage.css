@@ -109,6 +109,7 @@
     display: block;
     width: max-content;
     margin: 20px auto;
+    color: #FFFFFF;
     p {
       color: var(--Background);
       font-size: 1rem;

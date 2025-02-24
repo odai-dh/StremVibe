@@ -9,7 +9,7 @@
   .playButton {
     display: flex;
     gap: 10px;
-    color: var(--mainWhite);
+    color: #FFFFFF;
     align-items: center;
     justify-content: center;
     max-width: max-content;

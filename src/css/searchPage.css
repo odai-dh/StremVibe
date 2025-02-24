@@ -38,7 +38,7 @@
 
         .button {
             background-color: var(--mainRed);
-            color: var(--mainWhite);
+            color: #FFFFFF;
             font-weight: bold;
             padding: 20px 25px;
             border-radius: 5px;
