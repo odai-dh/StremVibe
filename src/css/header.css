@@ -1,3 +1,17 @@
+:root {
+  --logo-dark: url('../../public/Logo.svg');
+  --logo-light: url('../../public/LogoB.svg');
+}
+
+[data-theme="light"] {
+  --logo: var(--logo-light);
+}
+
+[data-theme="dark"] {
+  --logo: var(--logo-dark);
+}
+
+
 .header {
   width: 100%;
   color: var(--PText);
@@ -17,7 +31,7 @@
   margin-left: 10px;
 
   img {
-    width: 100%;
+    width: 200px;
     height: auto;
   }
 }
@@ -74,10 +88,41 @@
   }
 }
 
+.account-menu {
+  position: absolute;
+  top: 75px;
+  right:40px;
+  width: 400px;
+  background: var(--background);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1000;
+
+  a{
+    display: block;
+    padding: 20px 40px;
+    color: var(--PText);
+    text-decoration: none;
+  }
+  a:hover{
+    background: var(--borderColor);
+    color: var(--PText);
+    border-radius: 2px;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--iconColor);
+  }
+}
+
 
 @media (max-width: 1024px) {
 
-
+  .logo img{
+    width: 120px;
+  }
   .mobile-menu {
     display: flex;
     flex-direction: column;
@@ -116,10 +161,6 @@
 
 
 @media (max-width: 768px) {
-  .smallButtonContainer {
-    display: none;
-  }
-
   .bigButtonContainer {
     display: none;
   }
@@ -127,6 +168,9 @@
   .mobile-icon {
     display: block;
     cursor: pointer;
+  }
+  .logo img{
+    width: 110px;
   }
 
   .mobile-menu {

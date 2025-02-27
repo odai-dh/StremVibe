@@ -3,6 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdOutlineAccountBox } from "react-icons/md";
+import { MdOutlineMovieFilter, MdOutlineMovieCreation } from "react-icons/md";
+import { GiPlagueDoctorProfile } from "react-icons/gi";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import Search from "./Search";
 import "../../../css/header.css";
@@ -11,6 +14,7 @@ export default function Header() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -18,7 +22,6 @@ export default function Header() {
     return savedTheme ? JSON.parse(savedTheme) : false;
   });
 
-  // Navigation links
   const navLinks = [
     { name: "Home", link: "/", label: "Go to Home" },
     { name: "Movies", link: "/movies", label: "Go to Movies and Shows" },
@@ -42,21 +45,21 @@ export default function Header() {
   ];
   // Function to handle search button click
   const searchHandle = () => {
-    if (isSearchOpen === true) {
-      setIsSearchOpen(false);
-    } else {
-      setIsSearchOpen(true);
-    }
-  }
+    setIsSearchOpen(!isSearchOpen);
+  };
+  // Function to toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  // Function to toggle account menu
+  const toggleAccountMenu = () => {
+    setIsAccountMenuOpen(!isAccountMenuOpen);
+  };
   // Header background color and position based on the current page
   const headerBackground =
     location.pathname === "/" ? "transparent" : "rgba(0, 0, 0, 0.1)";
   const headerPosition = location.pathname === "/" ? "absolute" : "relative";
 
-  // Function to toggle mobile menu
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
 
   // Apply dark mode class to body
   useEffect(() => {
@@ -74,7 +77,7 @@ export default function Header() {
       style={{ background: headerBackground, position: headerPosition }}
     >
       <Link to="/" className="logo" aria-label="Homepage">
-        <img src="/logo.png" alt="Website logo" />
+        <img alt="Website logo" style={{ content: "var(--logo)"}} />
       </Link>
 
       <nav className="bigButtonContainer" aria-label="Main navigation">
@@ -99,13 +102,30 @@ export default function Header() {
             <button.Icon fill="var(--iconColor)" size={25} aria-hidden="true" />
           </button>
         ))}
+        <button aria-label="Account" onClick={toggleAccountMenu}>
+          <MdOutlineAccountBox fill="var(--iconColor)" size={25} aria-hidden="true" />
+        </button>
+        {isAccountMenuOpen && (
+          <div className="account-menu">
+            <Link to="/" onClick={() => setIsAccountMenuOpen(false)}>
+              <span className="icon"><GiPlagueDoctorProfile size={20} fill="var(--iconColor)" /> Profile Coming Soon</span>
+            </Link>
+            <Link to="/" onClick={() => setIsAccountMenuOpen(false)}>
+              <span className="icon"><MdOutlineMovieCreation size={20} fill="var(--iconColor)" /> Login Profile Coming Soon</span>
+            </Link>
+            <Link to="/" onClick={() => setIsAccountMenuOpen(false)}>
+              <span className="icon"><MdOutlineMovieFilter size={20} fill="var(--iconColor)" /> Sign Up Profile Coming Soon</span>
+            </Link>
+          </div>
+        )}
+
         <DarkModeSwitch
-        checked={isDarkMode}
-        onChange={setIsDarkMode}
-        size={24}
-        moonColor="white"
-        sunColor="black"
-      />
+          checked={isDarkMode}
+          onChange={setIsDarkMode}
+          size={24}
+          moonColor="white"
+          sunColor="black"
+        />
       </div>
 
       {/* for mobile */}
