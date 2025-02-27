@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../../css/searchBar.css";
 import fetchSearchResults from "../../../api/TMDB/fetchSearchResults";
 import { useNavigate } from "react-router-dom";
+import { MdSearch } from "react-icons/md";
 
 export default function Search({ isOpen }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,13 +33,15 @@ export default function Search({ isOpen }) {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search movies..."
+            placeholder="Search Movies..."
             className="search-input"
             onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
             autoFocus
           />
 
-          <button type="submit">Search Movies</button>
+          <button type="submit" aria-label="Search">
+            <MdSearch size={24} fill="var(--mainRed)" />
+          </button>
         </form>
   );
 }
