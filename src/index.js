@@ -11,6 +11,9 @@ import GenreArchivePage from './pages/GenreArchivePage';
 import LikedMoviePage from './pages/LikedMoviePage';
 import GenresPage from './pages/GenresPage';
 import SearchPage from './pages/SearchPage';
+// import Login from "./componants/Database/Login";
+// import Signup from "./componants/Database/Signup";
+// import ProfilePage from "./componants/ProfilePage/ProfilePage";
 
 // Set global SEO elements as it's a fake project
 const setGlobalSEO = () => {
@@ -37,13 +40,16 @@ root.render(
         <BrowserRouter>
           <Routes>
             {/* Define routes for the app */}
-            <Route path='/' element={<App />} />
+            <Route path='*' element={<App />} />
             <Route path='/movies' element={<ArchiveMoviePage />} />
             <Route path='/movies/:slug' element={<SingleMoviePage />} />
             <Route path='/genre/:genreName' element={<GenreArchivePage />} />
             <Route path='/genres' element={<GenresPage />} />
             <Route path='/liked' element={<LikedMoviePage />} />
             <Route path='/search-results' element={<SearchPage />} />
+            {/* <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/profile' element={<ProfilePage />} />  */}
           </Routes>
         </BrowserRouter>
       </APIProvider>
