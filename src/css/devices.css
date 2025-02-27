@@ -1,3 +1,37 @@
+:root {
+  --smartphone-dark: url('../../public/Smartphone.svg');
+  --tablet-dark: url('../../public/Taplet.svg');
+  --smart-tv-dark: url('../../public/Screen.svg');
+  --laptop-dark: url('../../public/Laptop.svg');
+  --gaming-console-dark: url('../../public/Ps.svg');
+  --vr-dark: url('../../public/Var.svg');
+
+  --smartphone-light: url('../../public/SmartPhoneB.svg');
+  --tablet-light: url('../../public/TapletB.svg');
+  --smart-tv-light: url('../../public/ScreenB.svg');
+  --laptop-light: url('../../public/LaptopB.svg');
+  --gaming-console-light: url('../../public/PsB.svg');
+  --vr-light: url('../../public/VarB.svg');
+}
+
+[data-theme="light"] {
+  --smartphone: var(--smartphone-light);
+  --tablet: var(--tablet-light);
+  --smart-tv: var(--smart-tv-light);
+  --laptop: var(--laptop-light);
+  --gaming-console: var(--gaming-console-light);
+  --vr: var(--vr-light);
+}
+
+[data-theme="dark"] {
+  --smartphone: var(--smartphone-dark);
+  --tablet: var(--tablet-dark);
+  --smart-tv: var(--smart-tv-dark);
+  --laptop: var(--laptop-dark);
+  --gaming-console: var(--gaming-console-dark);
+  --vr: var(--vr-dark);
+}
+
 .devicesContainer {
   margin-top: 3rem;
   color: var(--mainWhite);

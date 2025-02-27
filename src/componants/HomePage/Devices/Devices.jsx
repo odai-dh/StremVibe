@@ -6,42 +6,42 @@ export default function Devices() {
     {
       id: 1,
       name: "Smartphones",
-      image: "Smartphones.png",
+      imageVar: "var(--smartphone)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi sit similique quaerat voluptatum cum asperiores deleniti perspiciatis soluta ad nam nulla dolore minus, fugiat optio recusandae maiores aspernatur ratione",
     },
     {
       id: 2,
       name: "Tablet",
-      image: "Tablet.png",
+      imageVar: "var(--tablet)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi sit similique quaerat voluptatum cum asperiores deleniti perspiciatis soluta ad nam nulla dolore minus, fugiat optio recusandae maiores aspernatur ratione",
     },
     {
       id: 3,
       name: "Smart IV",
-      image: "Smart-IV.png",
+      imageVar: "var(--smart-tv)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi sit similique quaerat voluptatum cum asperiores deleniti perspiciatis soluta ad nam nulla dolore minus, fugiat optio recusandae maiores aspernatur ratione",
     },
     {
       id: 4,
       name: "Laptops",
-      image: "Laptops.png",
+      imageVar: "var(--laptop)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi sit similique quaerat voluptatum cum asperiores deleniti perspiciatis soluta ad nam nulla dolore minus, fugiat optio recusandae maiores aspernatur ratione",
     },
     {
       id: 5,
       name: "Gaming Consoles",
-      image: "Gaming-Consoles.png",
+      imageVar: "var(--gaming-console)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi sit similique quaerat voluptatum cum asperiores deleniti perspiciatis soluta ad nam nulla dolore minus, fugiat optio recusandae maiores aspernatur ratione",
     },
     {
       id: 6,
       name: "VR",
-      image: "VR.png",
+      imageVar: "var(--vr)",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi sit similique quaerat voluptatum cum asperiores deleniti perspiciatis soluta ad nam nulla dolore minus, fugiat optio recusandae maiores aspernatur ratione",
     },
@@ -63,8 +63,9 @@ export default function Devices() {
             <div className="thirdTitle cardTitle">
               <div className="imgBox">
                 <img
-                  src={`./${device.image}`}
+                  src={device.imageVar}
                   alt={device.name}
+                  style={{ content: device.imageVar }}
                 />
               </div>
               <h3>{device.name}</h3>
