@@ -11,6 +11,10 @@ import GenreArchivePage from './pages/GenreArchivePage';
 import LikedMoviePage from './pages/LikedMoviePage';
 import GenresPage from './pages/GenresPage';
 import SearchPage from './pages/SearchPage';
+import ArchiveTvShowsPage from './pages/ArchiveTvShowsPage';
+import SingleTvShowPage from './pages/SingleTvShowPage';
+import ActorPage from './pages/ActorPage';
+
 // import Login from "./componants/Database/Login";
 // import Signup from "./componants/Database/Signup";
 // import ProfilePage from "./componants/ProfilePage/ProfilePage";
@@ -47,6 +51,9 @@ root.render(
             <Route path='/genres' element={<GenresPage />} />
             <Route path='/liked' element={<LikedMoviePage />} />
             <Route path='/search-results' element={<SearchPage />} />
+            <Route path='/tv-shows' element={<ArchiveTvShowsPage />} />
+            <Route path='/tv-shows/:slug' element={<SingleTvShowPage />} />
+            <Route path='/cast/:id' element={ <ActorPage /> } /> 
             {/* <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/profile' element={<ProfilePage />} />  */}
