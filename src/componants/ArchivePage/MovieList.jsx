@@ -57,7 +57,7 @@ export default function MovieList({ category }) {
           key={movie.id}
           onClick={() =>
             navigate(`/movies/${generateSlug(movie.title)}`, {
-              state: { movie },
+              state: {item:  movie },
             })
           }
         >

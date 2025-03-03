@@ -31,7 +31,7 @@ export default function LikedMoviesList() {
                 {/* Button to navigate to movie details page */}
                 <button
                   className="link"
-                  onClick={() => navigate(`/movies/${generateSlug(movie.title)}`, { state: { movie } })}
+                  onClick={() => navigate(`/movies/${generateSlug(movie.title)}`, { state: { item: movie } })}
                 >
                   View Details
                 </button>              

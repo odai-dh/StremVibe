@@ -2,8 +2,8 @@ import React from "react";
 
 // MovieTrailer component to display the movie trailer
 export default function MovieTrailer({ trailerKey, title }) {
-  if (!trailerKey) {
-    return null;
+ if (!trailerKey) {
+    return <p>No trailer available</p>;
   }
 
   return (

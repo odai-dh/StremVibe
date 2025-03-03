@@ -25,6 +25,7 @@ export default function Header() {
   const navLinks = [
     { name: "Home", link: "/", label: "Go to Home" },
     { name: "Movies", link: "/movies", label: "Go to Movies and Shows" },
+    { name: "TV Shows", link: "/tv-shows", label: "Go to TV Shows" },
     { name: "Genres", link: "/genres", label: "Go to Genres" },
     { name: "Liked Movies", link: "/liked", label: "Go to Liked movies" },
   ];
