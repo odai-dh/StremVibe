@@ -8,22 +8,39 @@ import MovieDetailsContainer from "../componants/SinglePage/MovieDetailsContaine
 import Header from "../componants/UIComponant/Header/Header";
 import Footer from "../componants/UIComponant/Footer/Footer";
 import Community from "../componants/HomePage/Community/Community";
+import { fetchTrailer, fetchCast, fetchReviews } from "../api/TMDB/fetchTrailer";
 
 export default function SingleMoviePage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [showTrailer, setShowTrailer] = useState(false);
+  const [trailerKey, setTrailerKey] = useState(null);
   const { addMovieToLiked } = useLikedMovies();
-  const  movie  = location.state.movie;
+  const movie = location.state?.item;
 
-  // Redirect to home page if no movie data is found Ryan helped me with this
+  // Fetch trailer, cast, and reviews for the movie
+  useEffect(() => {
+    const fetchData = async () => {
+      if (movie) {
+        const trailerKey = await fetchTrailer(movie.id, 'movie');
+        const cast = await fetchCast(movie.id, 'movie');
+        const reviews = await fetchReviews(movie.id, 'movie');
+        setTrailerKey(trailerKey);
+        movie.cast = cast;
+        movie.reviews = reviews;
+      }
+    };
+    fetchData();
+  }, [movie]);
+
+  // Redirect to home page if no movie data is found
   useEffect(() => {
     if (!movie) {
       navigate("/");
     }
-  }, [movie, navigate])
+  }, [movie, navigate]);
 
-  // The names is self-explanatory
+  // The names are self-explanatory
   const handlePlayButtonClick = () => {
     setShowTrailer(true);
   };
@@ -33,6 +50,10 @@ export default function SingleMoviePage() {
   const handleLikeButtonClick = () => {
     addMovieToLiked(movie);
   };
+
+  if (!movie) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -48,12 +69,11 @@ export default function SingleMoviePage() {
         />
         <MovieDetailsContainer />
         <Modal show={showTrailer} onClose={handleCloseModal}>
-          <MovieTrailer trailerKey={movie.trailer} title={movie.title} />
+          <MovieTrailer trailerKey={trailerKey} title={movie.title} />
         </Modal>
         <Community />
       </div>
       <Footer />
-
     </>
   );
 }
