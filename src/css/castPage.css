@@ -1,0 +1,122 @@
+.castPage {
+    padding: 30px;
+    background-color: var(--ButtonBackground);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    color: var(--mainWhite);
+    display: flex;
+    gap: 20px;
+
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--mainWhite);
+    }
+
+    img {
+        width: 400px;
+        height: 600px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: var(--PText);
+    }
+
+    .castPage-info {
+        display: flex;
+        flex-direction: column;
+
+        .toggleBio {
+            color: var(--mainRed);
+            cursor: pointer;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    }
+
+
+
+
+    .movieCredits {
+        background-color: var(--Background);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(86, 80, 80, 0.1);
+        height: auto;
+        user-select: none;
+        padding: 20px;
+
+        .movieCredits-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+
+            h2 {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+                letter-spacing: 0.05rem;
+                color: var(--PText);
+            }
+
+
+            .arrow {
+                cursor: pointer;
+                background-color: var(--Background);
+                padding: 10px;
+                border-radius: 50%;
+                font-size: 24px;
+                color: var(--PText);
+                border: 1px solid var(--PText);
+                margin: 10px;
+            }
+        }
+
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            overflow-x: auto;
+            padding: 0;
+            margin: 0;
+
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                flex: 0 0 auto;
+
+
+
+                img {
+                    width: 100px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    margin-right: 10px;
+                }
+
+                p {
+                    font-size: 0.875rem;
+                    text-align: center;
+                    color: var(--mainWhite);
+                }
+            }
+        }
+
+
+    }
+
+}

@@ -6,10 +6,10 @@ import { useLocation, useNavigate } from "react-router";
 
 export default function SearchPage() {
   const location = useLocation();
-  const { results, query } = location.state || {};
+  const { results, query, type } = location.state || {};
   const navigate = useNavigate();
 
-  if (!results?.results) {
+  if (!results) {
     return <div>No results found</div>;
   }
 
@@ -33,22 +33,22 @@ export default function SearchPage() {
         <Header />
 
         <h1>Search Results For: {query}</h1>
-        {results.results.map((movie) => (
+        {results.results.map((item) => (
           <button
-            key={movie.id}
+            key={item.id}
             className="searchResult"
             onClick={() =>
-              navigate(`/movies/${generateSlug(movie.title)}`, {
-                state: { movie },
+              navigate(`/${type === "movie" ? "movies" : "tv-shows"}/${generateSlug(item.title || item.name)}`, {
+                state: { item },
               })
             }
           >
             <div>
-              <h2>{movie.original_title}</h2>
-              <p>{changeText(movie.overview)}</p>
+              <h2>{item.title || item.name}</h2>
+              <p>{changeText(item.overview)}</p>
             </div>
 
-            <p className="button">Go To Movie</p>
+            <p className="button">Go To {type === "movie" ? "Movie" : "TV Show"}</p>
           </button>
         ))}
 

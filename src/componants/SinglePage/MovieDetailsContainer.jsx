@@ -10,28 +10,28 @@ import { useLocation, useNavigate } from "react-router-dom";
 export default function MovieDetailsContainer() {
     const location = useLocation();
     const navigate = useNavigate();
-    if (!location.state || !location.state.movie) {
+    if (!location.state || !location.state.item) {
         navigate('/movies');
         return null;
     }
     // Destructure movie data from location state
-    const { movie } = location.state;  
+    const { item } = location.state;  
 
     return (
         <div className="movieDetailsContainer">
             <div className="leftColumn">
-                <MovieOverview title="Overview" description={movie.overview} />
-                <MovieCast cast={movie.cast || []} />
-                <MovieReviews movieId={movie.id} />
+                <MovieOverview title="Overview" description={item.overview} />
+                <MovieCast cast={item.cast || []} />
+                <MovieReviews movieId={item.id} />
             </div>
 
             <div className="rightColumn">
                 <MovieOther
-                rating={movie.vote_average}
-                releaseDate={movie.release_date}
-                popularity={movie.popularity}
-                voteCount={movie.vote_count}
-                genreIds={movie.genre_ids || []}
+                rating={item.vote_average}
+                releaseDate={item.release_date}
+                popularity={item.popularity}
+                voteCount={item.vote_count}
+                genreIds={item.genre_ids || []}
                 />
             </div>
       </div>
