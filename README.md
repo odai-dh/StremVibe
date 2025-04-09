@@ -166,8 +166,8 @@ Thank you for contributing!
 We have exciting features planned for future updates, including:
 
 1. **Series Integration**: 
-   - Add series from the TMDB API.
-   - Browse, search, and view details about series.
+   - Add series from the TMDB API.✅
+   - Browse, search, and view details about series.✅
 
 2. **Watch Tracking**:
    - Track which movies and series you have watched.

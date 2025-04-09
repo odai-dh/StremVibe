@@ -19,6 +19,29 @@ import ActorPage from './pages/ActorPage';
 // import Signup from "./componants/Database/Signup";
 // import ProfilePage from "./componants/ProfilePage/ProfilePage";
 
+
+// Function to dynamically add Google Analytics
+const addGoogleAnalytics = () => {
+  // Add the Google Analytics script
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-61VSSS19BQ";
+  document.head.appendChild(script);
+
+  // Add the Google Analytics configuration
+  const inlineScript = document.createElement('script');
+  inlineScript.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-61VSSS19BQ');
+  `;
+  document.head.appendChild(inlineScript);
+};
+
+// Call the function to add Google Analytics
+addGoogleAnalytics();
+
 // Set global SEO elements as it's a fake project
 const setGlobalSEO = () => {
   document.title = "Search the best movies - Movie site!";
